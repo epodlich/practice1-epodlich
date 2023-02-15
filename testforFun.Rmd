@@ -1,0 +1,8 @@
+---
+title: "rMarkPractice"
+author: "Ryan Corydon"
+date: "2023-02-15"
+output: html_document
+---
+
+testing if I know how to do this
