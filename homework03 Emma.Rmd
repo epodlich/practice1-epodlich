@@ -74,3 +74,8 @@ ggplot(data = canada_fixed, aes(x = year, y = lifeExp)) + geom_line()
 ```
 
 # Add the United States - Ryan
+
+```{r}
+
+```
+
