@@ -14,4 +14,6 @@ During my free time I enjoy playing soccer with friends. I also enjoy working ou
 # Ryan tools to organizing
 
 I utulize google calendar to help me schedule my day from the morning to the night. I would not be able to excel in class without having a semi strict schedule. I try and prepare for exams at least three days in advance depending on the class and work load that I have. AS well taking diligent notes during class to help me understand the material.
+<<<<<<< HEAD
 
+=======
