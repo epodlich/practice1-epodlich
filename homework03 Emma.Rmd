@@ -1,12 +1,13 @@
 ---
-title: 'Homework 3'
+title: "Homework 3"
 author: "Emma Podlich"
 date: "2/10/2022"
 output: html_document
+
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 #### Due: 2/17/2022 before 11:59pm. Submit in Canvas (file upload).
@@ -53,6 +54,7 @@ Number of pull requests I accepted: (from Ryan's repository: link above)
 # Canada Plot (Unfixed Data) - Emma
 
 ```{r}
+
 life5060 <- read.csv("https://raw.githubusercontent.com/epodlich/practice1-epodlich/main/gapminder-5060.csv")
 View(life5060)
 dim(life5060)
