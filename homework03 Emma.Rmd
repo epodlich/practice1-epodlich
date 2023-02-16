@@ -76,6 +76,22 @@ ggplot(data = canada_fixed, aes(x = year, y = lifeExp)) + geom_line()
 # Add the United States - Ryan
 
 ```{r}
+library(ggplot2)
+life5060 <- read.csv("https://raw.githubusercontent.com/epodlich/practice1-epodlich/main/gapminder-5060.csv")
+View(life5060)
+dim(life5060)
 
+us <- life5060[life5060$country == "United States", ]
+head(us)
+dim(us)
+ggplot(data = us, aes(x = year, y = lifeExp)) + geom_line()
+
+```
+```{r}
+us_fixed = us
+us_fixed$lifeExp[us_fixed$year==1957] = 69.49
+us_fixed
+
+ggplot(data = us_fixed, aes(x = year, y = lifeExp)) + geom_line()
 ```
 
