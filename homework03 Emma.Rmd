@@ -3,11 +3,10 @@ title: "Homework 3"
 author: "Emma Podlich"
 date: "2/10/2022"
 output: html_document
-
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 #### Due: 2/17/2022 before 11:59pm. Submit in Canvas (file upload).
@@ -54,7 +53,7 @@ Number of pull requests I accepted: (from Ryan's repository: link above)
 # Canada Plot (Unfixed Data) - Emma
 
 ```{r}
-
+library(ggplot2)
 life5060 <- read.csv("https://raw.githubusercontent.com/epodlich/practice1-epodlich/main/gapminder-5060.csv")
 View(life5060)
 dim(life5060)
@@ -78,6 +77,40 @@ ggplot(data = canada_fixed, aes(x = year, y = lifeExp)) + geom_line()
 # Add the United States - Ryan
 
 ```{r}
+library(ggplot2)
+life5060 <- read.csv("https://raw.githubusercontent.com/epodlich/practice1-epodlich/main/gapminder-5060.csv")
+View(life5060)
+dim(life5060)
+
+us <- life5060[life5060$country == "United States", ]
+head(us)
+dim(us)
+ggplot(data = us, aes(x = year, y = lifeExp)) + geom_line()
 
 ```
+```{r}
+us_fixed = us
+us_fixed$lifeExp[us_fixed$year==1957] = 69.49
+us_fixed
+
+ggplot(data = us_fixed, aes(x = year, y = lifeExp)) + geom_line()
+```
+
+# Add Australia - Emma
+
+```{r}
+australia <- life5060[life5060$country == "Australia", ]
+head(australia)
+dim(australia)
+
+ggplot(data = australia, aes(x = year, y = lifeExp)) + geom_line()
+```
+
+# Add All Three Together - Emma
+
+```{r}
+ggplot(data = canada_fixed, aes(x = year, y = lifeExp, colour=country)) + geom_line() + geom_line(data = life5060[life5060$country == "United States", ]) + geom_line(data = life5060[life5060$country == "Australia", ])
+```
+
+# Question 3
 
