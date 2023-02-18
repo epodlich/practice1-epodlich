@@ -33,24 +33,24 @@ Note: your submission is supposed to be fully reproducible, i.e. the TA and I wi
 
 For the submission: submit your solution in an **R Markdown file** and (just for insurance) submit the corresponding html (or Word) file with it. 
 
-## Question 1
+# Question 1
 Team Members: Emma (https://github.com/epodlich/practice1-epodlich) & Ryan (https://github.com/ryancorydon8/practice1-ryancorydon8)
 
-Number of successful pull requests I made: (on Ryan's repository: link above)
+Number of successful pull requests I made: 3 (on Ryan's repository: link above)
 
-Number of pull requests I accepted: (from Ryan's repository: link above)
+Number of pull requests I accepted: 5 (from Ryan's repository: link above)
 
-# Tips to Making Git/GitHub Easier
+### Tips to Making Git/GitHub Easier
 
-1.
+1. The main tip for working through Git/GitHub would be to practice going through the steps of making pull requests and accepting them. Practice being repetition will make it easier over time. During class, we made multiple pull requests and this process got easier with each lecture that we did it in.
 
-2.
+2. Another thing that I did to make the process easier was to write down a list of the steps, stating what button to place in each step. Creating a list of the steps helped me think through what I should be doing so that I could remember the steps without the list easier.
 
-3.
+3. Also, I would recommend that beginners start with using just the github website with doing pull requests / accepts because it is easier to start with just the website so that it isn't too overwhelming. Then, once you are comfortable with doing pull requests and acceptances, you can start trying to connect to github on RStudio. This way, the process isn't so overwhelming.
 
-## Question 2
+# Question 2
 
-# Canada Plot (Unfixed Data) - Emma
+### Canada Plot (Unfixed Data) - Emma
 
 ```{r}
 library(ggplot2)
@@ -64,7 +64,8 @@ dim(canada)
 ggplot(data = canada, aes(x = year, y = lifeExp)) + geom_line()
 
 ```
-# Canada Plot (Fixed Data) - Emma
+
+### Canada Plot (Fixed Data) - Emma
 
 ```{r}
 canada_fixed = canada
@@ -74,7 +75,7 @@ canada_fixed
 ggplot(data = canada_fixed, aes(x = year, y = lifeExp)) + geom_line()
 ```
 
-# Add the United States - Ryan
+### Add the United States - Ryan
 
 ```{r}
 library(ggplot2)
@@ -96,7 +97,7 @@ us_fixed
 ggplot(data = us_fixed, aes(x = year, y = lifeExp)) + geom_line()
 ```
 
-# Add Australia - Emma
+### Add Australia - Emma
 
 ```{r}
 australia <- life5060[life5060$country == "Australia", ]
@@ -106,7 +107,7 @@ dim(australia)
 ggplot(data = australia, aes(x = year, y = lifeExp)) + geom_line()
 ```
 
-# Add All Three Together - Emma
+### Add All Three Together - Emma
 
 ```{r}
 ggplot(data = canada_fixed, aes(x = year, y = lifeExp, colour=country)) + geom_line() + geom_line(data = life5060[life5060$country == "United States", ]) + geom_line(data = life5060[life5060$country == "Australia", ])
@@ -114,3 +115,19 @@ ggplot(data = canada_fixed, aes(x = year, y = lifeExp, colour=country)) + geom_l
 
 # Question 3
 
+To me, data science is the process of getting data from a source and then analyzing that data so that the information is useful to someone or something. For instance, a data scientist could get a bunch of medical data of someone's blood pressure and personal information (age, eating habits, lifestyle habits etc.) to predict when/if they will get hypertension, or high blood pressure, in the future. However, there are quite a few steps in the process of data science in order to make the data science work useful to a company or person. Some of the steps are listed below:
+
+1. Getting the Data
+  + Collecting blood pressure data
+  + Surveying personal information 
+2. Processing the Data
+  + Inputting the data into an analysis software
+  + Data cleaning
+3. Analyzing the Data
+  + Predictive Analysis
+  + Assess Performance
+4. Communicating the Results
+  + Telling patients if they are likely to get hypertension
+  + Presenting to diagnostic companies
+  
+Link to Performance Plot: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7567367/figure/pone.0240370.g002/
